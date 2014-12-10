@@ -1,0 +1,180 @@
+<SERVER NOTE>------User: jakebrown Logged in -- 12/01/14 - 11:45:52
+<SERVER NOTE>------User: jakebrown Logged out -- 12/01/14 - 11:46:37
+<SERVER SECURITY>--Error: Code 4 - User could not be found: cody -- 12/01/14 - 11:47:52
+<SERVER SECURITY>--Error: Code 4 - User could not be found: paul -- 12/01/14 - 11:48:42
+<SERVER NOTE>------User: jakebrown Logged in -- 12/01/14 - 11:49:15
+<SERVER NOTE>------Added User: Paul by jakebrown -- 12/01/14 - 11:50:02
+<SERVER NOTE>------User: jakebrown Logged out -- 12/01/14 - 11:51:01
+<SERVER SECURITY>--3 failed attempts for USERNAME: Paul -- 12/01/14 - 11:53:32
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: Paul -- 12/01/14 - 11:53:52
+<SERVER NOTE>------User: ADMIN Logged in -- 12/01/14 - 11:54:44
+<SERVER NOTE>------Unlocked User: Paul by ADMIN -- 12/01/14 - 11:55:56
+<SERVER NOTE>------User: ADMIN Logged out -- 12/01/14 - 11:56:05
+<SERVER NOTE>------User: jakebrown Logged in -- 12/01/14 - 13:21:59
+<SERVER NOTE>------User: jakebrown Logged out -- 12/01/14 - 13:21:59
+<SERVER NOTE>------User: jakebrown Logged in -- 12/01/14 - 13:23:05
+<SERVER NOTE>------User: jakebrown Logged out -- 12/01/14 - 13:23:05
+<SERVER SECURITY>--Error: Code 4 - User could not be found: paul -- 12/01/14 - 13:23:05
+<SERVER NOTE>------User: Paul Logged in -- 12/01/14 - 13:23:05
+<SERVER NOTE>------User: Paul Logged out -- 12/01/14 - 13:23:05
+<SERVER NOTE>------User: jakebrown Logged in -- 12/01/14 - 13:45:04
+<SERVER NOTE>------User: jakebrown Logged in -- 12/01/14 - 13:46:19
+<SERVER NOTE>------User: jakebrown Logged in -- 12/01/14 - 13:47:01
+<SERVER NOTE>------User: jakebrown Logged in -- 12/01/14 - 13:50:35
+<SERVER NOTE>------User: jakebrown Logged in -- 12/01/14 - 13:54:06
+<SERVER NOTE>------User: jakebrown Logged in -- 12/01/14 - 13:54:31
+<SERVER SECURITY>--Error: Code 4 - User could not be found: jakebrown -- 12/01/14 - 13:57:00
+<SERVER NOTE>------User: ADMIN Logged in -- 12/01/14 - 13:58:12
+<SERVER NOTE>------Removed User: jakebrown by ADMIN -- 12/01/14 - 13:58:12
+<SERVER NOTE>------User: ADMIN Logged out -- 12/01/14 - 13:58:12
+<SERVER NOTE>------User: ADMIN Logged in -- 12/01/14 - 14:01:49
+<SERVER NOTE>------Removed User: jakebrown by ADMIN -- 12/01/14 - 14:01:49
+<SERVER NOTE>------User: ADMIN Logged out -- 12/01/14 - 14:01:49
+<SERVER NOTE>------User: ADMIN Logged in -- 12/01/14 - 14:10:03
+<SERVER NOTE>------Removed User: cody by ADMIN -- 12/01/14 - 14:10:03
+<SERVER NOTE>------User: ADMIN Logged out -- 12/01/14 - 14:10:03
+<SERVER SECURITY>--Error: Code 4 - User could not be found: ADMIN -- 12/01/14 - 14:12:09
+<SERVER SECURITY>--Error: Code 4 - User could not be found:  -- 12/01/14 - 14:12:09
+<SERVER SECURITY>--Error: Code 4 - User could not be found: ADMINADMIN -- 12/01/14 - 14:12:09
+<SERVER NOTE>------User: ADMIN Logged in -- 12/01/14 - 14:12:09
+<SERVER NOTE>------Removed User: cody by ADMIN -- 12/01/14 - 14:12:09
+<SERVER NOTE>------User: ADMIN Logged out -- 12/01/14 - 14:12:09
+<SERVER NOTE>------User: ADMIN Logged in -- 12/01/14 - 14:14:19
+<SERVER NOTE>------Removed User: cody by ADMIN -- 12/01/14 - 14:14:19
+<SERVER NOTE>------User: ADMIN Logged out -- 12/01/14 - 14:14:19
+<SERVER NOTE>------User: ADMIN Logged in -- 12/01/14 - 14:18:45
+<SERVER NOTE>------Removed User: cody by ADMIN -- 12/01/14 - 14:18:45
+<SERVER NOTE>------User: ADMIN Logged out -- 12/01/14 - 14:18:45
+<SERVER SECURITY>--Error: Code 4 - User could not be found: jakebrown -- 12/02/14 - 08:34:27
+<SERVER NOTE>------User: ADMIN Logged in -- 12/02/14 - 08:34:27
+<SERVER NOTE>------User: ADMIN Logged out -- 12/02/14 - 08:34:27
+<SERVER SECURITY>--Error: Code 4 - User could not be found: jakebrown -- 12/02/14 - 08:34:27
+<SERVER SECURITY>--3 failed attempts for USERNAME: cody -- 12/02/14 - 08:34:27
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: cody -- 12/02/14 - 08:34:27
+<SERVER NOTE>------User: ADMIN Logged in -- 12/02/14 - 08:34:27
+<SERVER NOTE>------Unlocked User: cody by ADMIN -- 12/02/14 - 08:34:27
+<SERVER NOTE>------User: ADMIN Logged out -- 12/02/14 - 08:34:27
+<SERVER NOTE>------User: cody Logged in -- 12/02/14 - 08:34:27
+<SERVER NOTE>------User: cody Logged out -- 12/02/14 - 08:34:27
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 12:14:10
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 12:16:47
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 12:19:57
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 12:20:24
+<SERVER NOTE>------Removed User: cody by jakebrown -- 12/09/14 - 12:20:24
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 12:20:24
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 12:41:10
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 12:42:55
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 12:44:37
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 12:45:40
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 13:09:07
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 13:11:46
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 13:12:31
+<SERVER SECURITY>--3 failed attempts for USERNAME: ADMIN -- 12/09/14 - 13:22:21
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 13:52:49
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 13:52:49
+<SERVER SECURITY>--Error: Code 4 - User could not be found: jakebrwon -- 12/09/14 - 14:01:59
+<SERVER SECURITY>--3 failed attempts for USERNAME: jakebrown -- 12/09/14 - 14:11:43
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: jakebrown -- 12/09/14 - 14:11:43
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: jakebrown -- 12/09/14 - 14:11:43
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: jakebrown -- 12/09/14 - 14:13:14
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: ADMIN -- 12/09/14 - 14:13:14
+<SERVER SECURITY>--3 failed attempts for USERNAME: jakebrown -- 12/09/14 - 14:15:04
+<SERVER NOTE>------User: ADMIN Logged in -- 12/09/14 - 14:15:04
+<SERVER NOTE>------Unlocked User: jakebrown by ADMIN -- 12/09/14 - 14:15:04
+<SERVER NOTE>------User: ADMIN Logged out -- 12/09/14 - 14:15:04
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 14:15:04
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 14:18:50
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 14:18:50
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 14:18:50
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 14:18:50
+<SERVER SECURITY>--3 failed attempts for USERNAME: jakebrown -- 12/09/14 - 14:18:50
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: jakebrown -- 12/09/14 - 14:18:50
+<SERVER NOTE>------User: ADMIN Logged in -- 12/09/14 - 14:18:50
+<SERVER NOTE>------Unlocked User: bill by ADMIN -- 12/09/14 - 14:18:50
+<SERVER NOTE>------Unlocked User: jakebrown by ADMIN -- 12/09/14 - 14:18:50
+<SERVER NOTE>------User: ADMIN Logged out -- 12/09/14 - 14:18:50
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 14:18:50
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 14:18:50
+<SERVER SECURITY>--3 failed attempts for USERNAME: alex -- 12/09/14 - 14:18:50
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: alex -- 12/09/14 - 14:18:50
+<SERVER SECURITY>--3 failed attempts for USERNAME: jakebrown -- 12/09/14 - 14:18:50
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: jakebrown -- 12/09/14 - 14:23:36
+<SERVER NOTE>------User: ADMIN Logged in -- 12/09/14 - 14:23:36
+<SERVER NOTE>------User: ADMIN Logged out -- 12/09/14 - 14:23:36
+<SERVER SECURITY>--3 failed attempts for USERNAME: jakebrown -- 12/09/14 - 14:23:36
+<SERVER SECURITY>--3 failed attempts for USERNAME: alex -- 12/09/14 - 14:28:28
+<SERVER SECURITY>--Error: Code 4 - User could not be found: exit -- 12/09/14 - 14:28:28
+<SERVER SECURITY>--3 failed attempts for USERNAME: jakebrown -- 12/09/14 - 14:31:02
+<SERVER SECURITY>--3 failed attempts for USERNAME: jakebrown -- 12/09/14 - 14:31:02
+<SERVER SECURITY>--Error: Code 4 - User could not be found: admin -- 12/09/14 - 14:31:02
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: jakebrown -- 12/09/14 - 14:33:15
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: jakebrown -- 12/09/14 - 14:33:15
+<SERVER NOTE>------User: ADMIN Logged in -- 12/09/14 - 14:33:15
+<SERVER NOTE>------Unlocked User: jakebrown by ADMIN -- 12/09/14 - 14:33:15
+<SERVER NOTE>------User: ADMIN Logged out -- 12/09/14 - 14:33:15
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 14:33:15
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 14:33:15
+<SERVER NOTE>------User: alex Logged in -- 12/09/14 - 14:33:15
+<SERVER NOTE>------User: alex Logged out -- 12/09/14 - 14:33:15
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 14:40:04
+<SERVER NOTE>------Attempt to unlock unknown user: freddy by jakebrown -- 12/09/14 - 14:40:04
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 14:40:04
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 14:43:41
+<SERVER NOTE>------Attempt to unlock unknown user: freddy by jakebrown -- 12/09/14 - 14:43:52
+<SERVER NOTE>------Attempt to unlock unknown user: billy by jakebrown -- 12/09/14 - 14:44:00
+<SERVER NOTE>------Attempt to unlock unknown user: tedd by jakebrown -- 12/09/14 - 14:44:05
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 14:59:42
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 15:00:35
+<SERVER NOTE>------Added User: alexy by jakebrown -- 12/09/14 - 15:00:48
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 15:00:50
+<SERVER NOTE>------User: ADMIN Logged in -- 12/09/14 - 15:00:57
+<SERVER NOTE>------User: ADMIN Logged out -- 12/09/14 - 15:01:07
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 15:02:06
+<SERVER NOTE>------Added User: alexy by jakebrown -- 12/09/14 - 15:02:16
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 15:02:18
+<SERVER NOTE>------User: ADMIN Logged in -- 12/09/14 - 15:02:24
+<SERVER NOTE>------Removed User: alex by ADMIN -- 12/09/14 - 15:02:42
+<SERVER NOTE>------Removed User: ADMIN by ADMIN -- 12/09/14 - 15:04:14
+<SERVER NOTE>------User: ADMIN Logged out -- 12/09/14 - 15:04:32
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 15:13:24
+<SERVER NOTE>------Removed User: jakebrown by jakebrown -- 12/09/14 - 15:13:31
+<SERVER NOTE>------User Account: jakebrown deleted and logged out -- 12/09/14 - 15:13:31
+<SERVER SECURITY>--3 failed attempts for USERNAME: jakebrown -- 12/09/14 - 17:43:32
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: jakebrown -- 12/09/14 - 17:43:44
+<SERVER SECURITY>--Error: Code 4 - User could not be found: jakebrwond -- 12/09/14 - 17:44:03
+<SERVER NOTE>------User: ADMIN Logged in -- 12/09/14 - 18:02:44
+<SERVER NOTE>------User: ADMIN Logged out -- 12/09/14 - 18:02:46
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: jakebrown -- 12/09/14 - 18:03:03
+<SERVER NOTE>------User: ADMIN Logged in -- 12/09/14 - 18:03:16
+<SERVER NOTE>------Unlocked User: jakebrown by ADMIN -- 12/09/14 - 18:03:28
+<SERVER NOTE>------User: ADMIN Logged out -- 12/09/14 - 18:03:31
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 18:03:40
+<SERVER NOTE>------Added User: Mike by jakebrown -- 12/09/14 - 18:05:13
+<SERVER NOTE>------Added User: student by jakebrown -- 12/09/14 - 18:05:20
+<SERVER NOTE>------Added User: fred by jakebrown -- 12/09/14 - 18:05:35
+<SERVER NOTE>------Added User: bill by jakebrown -- 12/09/14 - 18:05:43
+<SERVER NOTE>------Added User: michelle by jakebrown -- 12/09/14 - 18:06:03
+<SERVER NOTE>------Added User: sam by jakebrown -- 12/09/14 - 18:06:21
+<SERVER NOTE>------Added User: Tina by jakebrown -- 12/09/14 - 18:06:33
+<SERVER NOTE>------Added User: santa by jakebrown -- 12/09/14 - 18:06:45
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 18:07:26
+<SERVER NOTE>------User: ADMIN Logged in -- 12/09/14 - 18:08:03
+<SERVER NOTE>------User: ADMIN Logged out -- 12/09/14 - 18:08:13
+<SERVER NOTE>------User: alex Logged in -- 12/09/14 - 18:10:05
+<SERVER NOTE>------Removed User: sam by alex -- 12/09/14 - 18:10:16
+<SERVER NOTE>------User: alex Logged out -- 12/09/14 - 18:10:19
+<SERVER SECURITY>--Error: Code 4 - User could not be found: sam -- 12/09/14 - 18:10:26
+<SERVER SECURITY>--Error: Code 4 - User could not be found: sam -- 12/09/14 - 18:10:34
+<SERVER NOTE>------User: ADMIN Logged in -- 12/09/14 - 18:10:45
+<SERVER NOTE>------Added User: Sam by ADMIN -- 12/09/14 - 18:10:53
+<SERVER NOTE>------User: ADMIN Logged out -- 12/09/14 - 18:11:04
+<SERVER SECURITY>--Error: Code 4 - User could not be found: Paul -- 12/09/14 - 18:11:08
+<SERVER SECURITY>--3 failed attempts for USERNAME: alex -- 12/09/14 - 18:11:30
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: alex -- 12/09/14 - 18:11:35
+<SERVER SECURITY>--Possible Threat: Attempt to access locked account: alex -- 12/09/14 - 18:11:47
+<SERVER NOTE>------User: jakebrown Logged in -- 12/09/14 - 18:12:04
+<SERVER NOTE>------Unlocked User: alex by jakebrown -- 12/09/14 - 18:12:11
+<SERVER NOTE>------User: jakebrown Logged out -- 12/09/14 - 18:12:13
+<SERVER NOTE>------User: alex Logged in -- 12/09/14 - 18:12:20
+<SERVER NOTE>------Added User: Paul by alex -- 12/09/14 - 18:12:35
+<SERVER NOTE>------User: alex Logged out -- 12/09/14 - 18:12:38
