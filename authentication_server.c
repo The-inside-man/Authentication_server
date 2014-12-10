@@ -703,7 +703,7 @@ int main (int argc, char *argv[])
 			char del_user[80];
 			strcpy(del_user, buffer);
 			
-			printf(ANSI_COLOR_BLUE "<SERVER ADD USER>--Opening file of users" ANSI_COLOR_NORMAL "\n");
+			printf(ANSI_COLOR_BLUE "<SERVER REMOVE USER>--Opening file of users" ANSI_COLOR_NORMAL "\n");
 			
 			FILE *users = fopen("bin/users.txt", "r");							// We open the file containing user information in append mode to add new user and password
     		
