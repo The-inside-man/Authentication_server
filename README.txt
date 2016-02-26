@@ -1,15 +1,15 @@
 //////////////////////////////////////////////////////////
-//	Name:			Jacob Brown	                        //
-//	Student #:		100 762 690                         //
-//	Course:			COMP3203                            //	
-//	EDITED:  		03 Oct 2014	                        //
-//	Title:			Authentication System               //        
+//	Name:			Jacob Brown	        //
+//	Student #:		100 762 690             //
+//	Course:			COMP3203                //	
+//	EDITED:  		03 Oct 2014	        //
+//	Title:			Authentication System   //        
 //                                                      //
-//	INCLUDED FILES:                                     //
-//		- authentication_server.c	(UDP)               //
-//		- pi_client.c                                   //
-//		- authentication.h                              //
-//		- authentication.c                              //
+//	INCLUDED FILES:                                 //
+//		- authentication_server.c	(UDP)   //
+//		- pi_client.c                           //
+//		- authentication.h                      //
+//		- authentication.c                      //
 //      - README.txt                                    //
 //                                                      //
 //  TOTAL:         5 files                              //
