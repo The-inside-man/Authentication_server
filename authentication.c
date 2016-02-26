@@ -1,23 +1,23 @@
 //////////////////////////////////////////////////////////
-//	Name:			Jacob Brown							//
-//	Student #:		100 762 690							//
-//	Course:			COMP3203							//	
-//	Title:			Authentication like KERBEROS Source //
-//	Date:			31 October 2014						//
+//Name:		Jacob Brown				//
+//Student #:	100 762 690				//
+//Course:	COMP3203				//	
+//Title:	Authentication like KERBEROS Source 	//
+//Date:		31 October 2014				//
 //////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////
-//															//
-//	Description:	This is a KERBEROS like implementation 	//
-//					developed by student, Jacob Brown, at 	//
-//					Carleton University. KERBEROS was dev-	//
-//					eloped by MIT. This implementation us-	//	
-//					es sha256 for the hashing algorithm a-	//
-//					nd BBC as the encryption for salt val-	//
-//					ues and any information needed to be 	//
-//					encrypted. Developed for COMP3203 		//
-//					Fundamentals of computer networks.		//
-//															//
+//							    //
+//Description:	This is a KERBEROS like implementation	    //
+//		developed by student, Jacob Brown, at 	    //
+//		Carleton University. KERBEROS was dev- 	    //
+//		eloped by MIT. This implementation us-	    //	
+//		es sha256 for the hashing algorithm a-	    //
+//		nd BBC as the encryption for salt val-	    //
+//		ues and any information needed to be 	    //
+//		encrypted. Developed for COMP3203 	    //
+//		Fundamentals of computer networks.	    //
+//							    //
 //////////////////////////////////////////////////////////////
 
 #include "authentication.h"		// The header File including the prototypes		
