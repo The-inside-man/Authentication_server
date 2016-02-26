@@ -103,20 +103,20 @@ int main (int argc, char *argv[])
     
     printf(ANSI_COLOR_BLUE "<SERVER>--waiting for interaction from client..." ANSI_COLOR_NORMAL "\n");			// Once socket created and bound we wait for a client to connect
     
-    while(1) {													// We start a main loop for the server
+    while(1) {										// We start a main loop for the server
     	memset(buffer, 0, sizeof(buffer));						// Clear buffer
-    	memset(fileBuff, 0, sizeof(fileBuff));  				// Clear fileBuff
-    	memset(strBuff, 0, sizeof(strBuff));   					// Clear strBuff
+    	memset(fileBuff, 0, sizeof(fileBuff));  					// Clear fileBuff
+    	memset(strBuff, 0, sizeof(strBuff));   						// Clear strBuff
     	memset(cmd, 0, sizeof(cmd));   							// Clear cmd
-    	char			cwd[MAX];								// Stores the Current working Directory
-    	char 			attempts[2];							// Stores attempts from files
-    	char			username[80];							// Store Username
+    	char			cwd[MAX];						// Stores the Current working Directory
+    	char 			attempts[2];						// Stores attempts from files
+    	char			username[80];						// Store Username
     	
-    	while(!authenticated){									// We start the loop to authenticate users
+    	while(!authenticated){								// We start the loop to authenticate users
     		/* 	Variables to be used with Authenticating  */
     		memset(buffer, 0, sizeof(buffer));					// Clear buffer
-    		char 	*line 		= NULL;							// Char array to store lines from file
-			size_t 	len 		= 0; 							// Stores length of line from readline of file
+    		char 	*line 		= NULL;						// Char array to store lines from file
+			size_t 	len 		= 0; 					// Stores length of line from readline of file
 			char 	output[33];
     		char 	aKey[33];
     		
@@ -126,7 +126,7 @@ int main (int argc, char *argv[])
     				aKey[32] 	= 0x00;							// Key buffer for hash function
 			int 	aSalt 		= 0;							// Salt variable sent to hash function
 			int 	found 		= 0;							// Assigned 1 when user is found
-			int		result		= 0;							// Assigned 1 if hash is successful
+			int	result		= 0;							// Assigned 1 if hash is successful
 			char 	*input;
 			int 	locked		= 0;
     		
