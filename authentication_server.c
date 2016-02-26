@@ -1,68 +1,68 @@
 //////////////////////////////////////////////////////////
-//	Name:			Jacob Brown							//
-//	Student #:		100 762 690							//
-//	Course:			COMP3203							//	
-//	EDITED:  		03 Oct 2014							//
-//	Title:			Authentication Server.c	(UDP)		//
+//Name:			Jacob Brown			//
+//Student #:		100 762 690			//
+//Course:		COMP3203			//	
+//EDITED:  		03 Oct 2014			//
+//Title:		Authentication Server.c	(UDP)	//
 //////////////////////////////////////////////////////////
 
-#include <stdio.h>      						// for printf() and fprintf() 
-#include <sys/socket.h> 						// for socket() and bind() 
-#include <arpa/inet.h>  						// for sockaddr_in and inet_ntoa() 
-#include <stdlib.h>     						// for atoi() and exit() 
-#include <string.h>     						// for memset() 
-#include <unistd.h>     						// for close() 
-#include <sys/types.h>							//
-#include <netinet/in.h>							// 
-#include <time.h>								// for time variables
-#include <dirent.h>								// for files
-#include <sys/stat.h>							// for specs of files
-#include <string.h>								// for string manipulation
-#include "authentication.h"						// for authentication protocols
+#include <stdio.h>      					// for printf() and fprintf() 
+#include <sys/socket.h> 					// for socket() and bind() 
+#include <arpa/inet.h>  					// for sockaddr_in and inet_ntoa() 
+#include <stdlib.h>     					// for atoi() and exit() 
+#include <string.h>     					// for memset() 
+#include <unistd.h>     					// for close() 
+#include <sys/types.h>						//
+#include <netinet/in.h>						// 
+#include <time.h>						// for time variables
+#include <dirent.h>						// for files
+#include <sys/stat.h>						// for specs of files
+#include <string.h>						// for string manipulation
+#include "authentication.h"					// for authentication protocols
 
-#define MAX 2048     							// Longest string to echo 
-#define FILE_MAX_SIZE 4096						// Largest file size
+#define MAX 2048     						// Longest string to echo 
+#define FILE_MAX_SIZE 4096					// Largest file size
 #define ANSI_COLOR_RED 		"\x1b[31m"			// Red color for text
 #define ANSI_COLOR_BLUE    	"\x1b[34m"			// Blue Color for text
 #define ANSI_COLOR_GREEN   	"\x1b[32m"			// Green color for text
 #define ANSI_COLOR_CYAN    	"\x1b[36m"			// Cyan Color for text
-#define ANSI_COLOR_MAGENTA  "\x1b[35m"			// Magenta color for text
+#define ANSI_COLOR_MAGENTA  	"\x1b[35m"			// Magenta color for text
 #define ANSI_COLOR_GREY		"\x1b[33m"			// Yellow for logging text
-#define ANSI_COLOR_NORMAL   "\x1b[0m"			// Normal color for text
+#define ANSI_COLOR_NORMAL   	"\x1b[0m"			// Normal color for text
 
 int main (int argc, char *argv[])
 {
-	int 			sock;								// The Socket
+	int 			sock;					// The Socket
   	struct 			sockaddr_in  thisAddr, clientAddr;	// Socket struct
-  	struct			dirent *myFile;						// Struct used for when displaying files in directory
-  	struct 			stat myStat;						// Struct for using stats for files
+  	struct			dirent *myFile;				// Struct used for when displaying files in directory
+  	struct 			stat myStat;				// Struct for using stats for files
   	fd_set 			readfds;					
-  	unsigned short 	thisPort;     						// Server port
-    char 			buffer[MAX];        				// Buffer for echo string
-    char			fileBuff[FILE_MAX_SIZE];			// File Buffer
-    char			strBuff[MAX];						// String buffer
-    int 			recvMsgSize;                		// Size of received message
-    DIR 			*thisDir;							// Working Directory for server
-    //char			cwd[MAX];							// Stores the Current working Directory
-    char 			fl_name[255];						// File name is stored in this buffer
-    char 			cmd[80];							// Small buffer for commands from client
-    int 			authenticated = 0;					// set to 1 when true
-	time_t			rawtime;							// Time
-	struct			tm * time_info;						// Time struct
+  	unsigned short 		thisPort;     				// Server port
+    	char 			buffer[MAX];        			// Buffer for echo string
+    	char			fileBuff[FILE_MAX_SIZE];		// File Buffer
+    	char			strBuff[MAX];				// String buffer
+    	int 			recvMsgSize;                		// Size of received message
+    	DIR 			*thisDir;				// Working Directory for server
+    	//char			cwd[MAX];				// Stores the Current working Directory
+    	char 			fl_name[255];				// File name is stored in this buffer
+    	char 			cmd[80];				// Small buffer for commands from client
+    	int 			authenticated = 0;			// set to 1 when true
+	time_t			rawtime;				// Time
+	struct			tm * time_info;				// Time struct
 	
 	time( &rawtime );
     
-    if (argc != 2)         										// We verify the number of arguments inputed when starting the server
+    if (argc != 2)         						// We verify the number of arguments inputed when starting the server
     {
         printf("Must include argument: <UDP SERVER PORT>");		// Error message if incorrect amount of arguments
         exit(1);
     }
     
-    thisPort = atoi(argv[1]); 									// Assigning the first argument to the port
+    thisPort = atoi(argv[1]); 						// Assigning the first argument to the port
     
     
     sock = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);			// Creation of the socket
-    if(sock < 0) {												// Verify it was created correctly
+    if(sock < 0) {							// Verify it was created correctly
     	printf("Failed to open the server socket\n");			// Error message displayed if not created properly
     	exit(-1);
     }
@@ -71,30 +71,30 @@ int main (int argc, char *argv[])
     memset(&thisAddr, 0, sizeof(thisAddr));   					// Here the address is set up and memory is allocated
     thisAddr.sin_family = AF_INET;                
     thisAddr.sin_addr.s_addr = htonl(INADDR_ANY); 
-    thisAddr.sin_port = htons(thisPort);  						// Use of htons for network bit order
+    thisAddr.sin_port = htons(thisPort);  					// Use of htons for network bit order
     
-    if (bind(sock, (struct sockaddr *) &thisAddr, sizeof(thisAddr)) < 0){ // Bind the sockets and check for success
-    	printf("Failed to bind socket\n");						// Error message displayed of fails to Bind the socket
-    	exit(-1);												// Program ends
+    if (bind(sock, (struct sockaddr *) &thisAddr, sizeof(thisAddr)) < 0){ 	// Bind the sockets and check for success
+    	printf("Failed to bind socket\n");					// Error message displayed of fails to Bind the socket
+    	exit(-1);								// Program ends
     }
     
-    unsigned int	size = sizeof(thisAddr); 			//The size of the clients address is stored here
+    unsigned int	size = sizeof(thisAddr); 				//The size of the clients address is stored here
     
     //	Print the start up message with legend for color codes for operations
     
     system("clear");											// Clear the screan
-    printf(ANSI_COLOR_MAGENTA"********************************************************************************"                	  ANSI_COLOR_NORMAL"\n");
-    printf(ANSI_COLOR_MAGENTA"*"ANSI_COLOR_CYAN"             AUTHENTICATION SERVER BY JAKE BROWN - NOVEMBER 2014              "	  ANSI_COLOR_MAGENTA"*\n"); 
-	printf(ANSI_COLOR_MAGENTA"********************************************************************************"					  ANSI_COLOR_NORMAL"\n");
-	printf(ANSI_COLOR_MAGENTA"*"ANSI_COLOR_CYAN"                                     LEGEND                                   "	  ANSI_COLOR_MAGENTA"*\n");
-	printf(ANSI_COLOR_MAGENTA"********************************************************************************"					  ANSI_COLOR_NORMAL"\n");
-	printf(ANSI_COLOR_MAGENTA"*"    ANSI_COLOR_RED"                             ERROR MESSAGES                                   "ANSI_COLOR_MAGENTA"*\n");
-	printf(ANSI_COLOR_MAGENTA"*"   ANSI_COLOR_BLUE"                             WORK DONE BY SERVER                              "ANSI_COLOR_MAGENTA"*\n");
-	printf(ANSI_COLOR_MAGENTA"*"  ANSI_COLOR_GREEN"                             SUCCESSFUL OPERATION                             "ANSI_COLOR_MAGENTA"*\n");
-	printf(ANSI_COLOR_MAGENTA"*"   ANSI_COLOR_CYAN"                             HASH INFORMATION                                 "ANSI_COLOR_MAGENTA"*\n");
-	printf(ANSI_COLOR_MAGENTA"*"ANSI_COLOR_MAGENTA"                             INFORMATION RECEIVED FROM CLIENT                 "ANSI_COLOR_MAGENTA"*\n");
-	printf(ANSI_COLOR_MAGENTA"*"   ANSI_COLOR_GREY"                             INFORMATION PRINTED TO LOG                       "ANSI_COLOR_MAGENTA"*\n");
-	printf(ANSI_COLOR_MAGENTA"********************************************************************************"ANSI_COLOR_NORMAL"\n");
+    printf(ANSI_COLOR_MAGENTA"********************************************************************************"                	  	ANSI_COLOR_NORMAL"\n");
+    printf(ANSI_COLOR_MAGENTA"*"ANSI_COLOR_CYAN"             AUTHENTICATION SERVER BY JAKE BROWN - NOVEMBER 2014              "	  	ANSI_COLOR_MAGENTA"*\n"); 
+	printf(ANSI_COLOR_MAGENTA"********************************************************************************"			ANSI_COLOR_NORMAL"\n");
+	printf(ANSI_COLOR_MAGENTA"*"ANSI_COLOR_CYAN"                                     LEGEND                                   "	ANSI_COLOR_MAGENTA"*\n");
+	printf(ANSI_COLOR_MAGENTA"********************************************************************************"			ANSI_COLOR_NORMAL"\n");
+	printf(ANSI_COLOR_MAGENTA"*"    ANSI_COLOR_RED"                             ERROR MESSAGES                                   "	ANSI_COLOR_MAGENTA"*\n");
+	printf(ANSI_COLOR_MAGENTA"*"   ANSI_COLOR_BLUE"                             WORK DONE BY SERVER                              "	ANSI_COLOR_MAGENTA"*\n");
+	printf(ANSI_COLOR_MAGENTA"*"  ANSI_COLOR_GREEN"                             SUCCESSFUL OPERATION                             "	ANSI_COLOR_MAGENTA"*\n");
+	printf(ANSI_COLOR_MAGENTA"*"   ANSI_COLOR_CYAN"                             HASH INFORMATION                                 "	ANSI_COLOR_MAGENTA"*\n");
+	printf(ANSI_COLOR_MAGENTA"*"ANSI_COLOR_MAGENTA"                             INFORMATION RECEIVED FROM CLIENT                 "	ANSI_COLOR_MAGENTA"*\n");
+	printf(ANSI_COLOR_MAGENTA"*"   ANSI_COLOR_GREY"                             INFORMATION PRINTED TO LOG                       "	ANSI_COLOR_MAGENTA"*\n");
+	printf(ANSI_COLOR_MAGENTA"********************************************************************************"			ANSI_COLOR_NORMAL"\n");
     
     
     
