@@ -1,59 +1,59 @@
 //////////////////////////////////////////////////////////
-//	Name:			Jacob Brown							//
-//	Student #:		100 762 690							//
-//	Course:			COMP3203							//	
-//	Title:		  	pi_client.c							//
+//	Name:			Jacob Brown		//
+//	Student #:		100 762 690		//
+//	Course:			COMP3203		//	
+//	Title:		  	pi_client.c		//
 //////////////////////////////////////////////////////////
 
-#include <stdio.h>      											// for printf() and fprintf() 
-#include <sys/socket.h> 											// for socket() and bind() 
-#include <arpa/inet.h>  											// for sockaddr_in and inet_ntoa() 
-#include <stdlib.h>     											// for atoi() and exit() 
-#include <string.h>     											// for memset() 
-#include <unistd.h>     											// for close() 
+#include <stdio.h>      							// for printf() and fprintf() 
+#include <sys/socket.h> 							// for socket() and bind() 
+#include <arpa/inet.h>  							// for sockaddr_in and inet_ntoa() 
+#include <stdlib.h>     							// for atoi() and exit() 
+#include <string.h>     							// for memset() 
+#include <unistd.h>     							// for close() 
 #include <sys/types.h>
 #include <netinet/in.h>
 #include "authentication.h"
 
-#define MAX 1024     												// Longest string to echo 
-#define ANSI_COLOR_RED 		"\x1b[31m"								// Red color for text
-#define ANSI_COLOR_BLUE    	"\x1b[34m"								// Blue Color for text
-#define ANSI_COLOR_GREEN   	"\x1b[32m"								// Green color for text
-#define ANSI_COLOR_CYAN    	"\x1b[36m"								// Cyan Color for text
-#define ANSI_COLOR_MAGENTA  "\x1b[35m"								// Magenta color for text
-#define ANSI_COLOR_NORMAL   "\x1b[0m"								// Normal color for text
-#define DOTS_10 			"................................................................................"
-#define SPAC_10 			"                                                                                "
+#define MAX 1024     								// Longest string to echo 
+#define ANSI_COLOR_RED 		"\x1b[31m"					// Red color for text
+#define ANSI_COLOR_BLUE    	"\x1b[34m"					// Blue Color for text
+#define ANSI_COLOR_GREEN   	"\x1b[32m"					// Green color for text
+#define ANSI_COLOR_CYAN    	"\x1b[36m"					// Cyan Color for text
+#define ANSI_COLOR_MAGENTA  	"\x1b[35m"					// Magenta color for text
+#define ANSI_COLOR_NORMAL   	"\x1b[0m"					// Normal color for text
+#define DOTS_10 		"................................................................................"
+#define SPAC_10 		"                                                                                "
 
 int main (int argc, char *argv[])
 {
-	int 			sock;											// Socket to be created
+	int 			sock;								// Socket to be created
   	struct 			sockaddr_in  thisAddr, clientAddr;				// Struct for socket
-  	unsigned int 	clientAddrSize;									// Integer to store size of address
-  	unsigned short 	thisPort;     									// Server port
-  	char			msgStr[MAX];									// Msg string for Commands
-    char 			cBuff[MAX];        								// Buffer for strings passed back and fourth
-    char 			rcvBuff[MAX];									// Buffer for receiving from server
-    int 			msgSize;                						// Size of received message
-    int				rcvMsgSize;										// Int to store the size of the msg received
-    char 			*serverIp;                  					// IP address of server 
-    int 			authenticated 	= 0;
-    char 			fl_name[255];
-    int				receivedTwo	 	= 0;
+  	unsigned int 		clientAddrSize;							// Integer to store size of address
+  	unsigned short 		thisPort;     							// Server port
+  	char			msgStr[MAX];							// Msg string for Commands
+  	char 			cBuff[MAX];        						// Buffer for strings passed back and fourth
+    	char 			rcvBuff[MAX];							// Buffer for receiving from server
+    	int 			msgSize;                					// Size of received message
+    	int			rcvMsgSize;							// Int to store the size of the msg received
+    	char 			*serverIp;                  					// IP address of server 
+    	int 			authenticated 	= 0;
+    	char 			fl_name[255];
+    	int			receivedTwo	 	= 0;
     
     
-    if (argc != 3)         											// Here we verify the number of arguments to be used with running client
+    if (argc != 3)         				// Here we verify the number of arguments to be used with running client
     {
         printf("Must include argument: <Server IP>[<Echo Port>]\n");
         exit(1);
     }
     
-    serverIp = argv[1];           									//assigning ip of server to variable
-    thisPort = atoi(argv[2]); 										//assigning the first argument to the port
+    serverIp = argv[1];           							//assigning ip of server to variable
+    thisPort = atoi(argv[2]); 								//assigning the first argument to the port
     
 	sock = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
 	
-	if(sock < 0){													// Verify socket was created successfully 
+	if(sock < 0){									// Verify socket was created successfully 
 		printf("Failed to create socket..\n");
 		exit(-1);
 	}
@@ -118,25 +118,25 @@ int main (int argc, char *argv[])
         		if((strcmp(rcvBuff, "locked") == 0)){						// Account locked
         			printf("THIS USER ACCOUNT HAS BEEN LOCKED. CONTACT ADMIN USER. FLAG RAISED!\n");
         			printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"||||||||||||"ANSI_COLOR_NORMAL"|||||||||||||||||||||||||\n");
-      			    printf("|  ||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
+      			    	printf("|  ||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
       				printf("|  ||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
-                    printf("|  ||||||||||||||||||"ANSI_COLOR_RED"||||   |||||||||||   ||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
-                    printf("|  ||||||||||||||||||"ANSI_COLOR_RED"||||   |||||||||||   ||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
-                    printf("|  ||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
-                    printf("|  ||||||||||||||||||||"ANSI_COLOR_RED"||||||||| || ||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
-                    printf("|  |||||||||||||||||||||"ANSI_COLOR_RED"||||||| _||_ ||||||||"ANSI_COLOR_NORMAL"|||||||||||||||||||\n"); 
-                    printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||||||||\n");
-                    printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||||||||\n");
-                    printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"| | | | | | |"ANSI_COLOR_NORMAL"||||||||||||||||||||||||\n");
-                    printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"!LOCKED--OUT!"ANSI_COLOR_NORMAL"||||||||||||||||||||||||\n");
-                    printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||||||||\n");
-                    printf("|  |\n");
-                    printf("|  |\n");
-                    printf("|  |\n");
-                    printf("|  |\n");
-                    printf("|  |\n");
-                    printf("|  |\n");
-                    printf("|__|\n");
+                    		printf("|  ||||||||||||||||||"ANSI_COLOR_RED"||||   |||||||||||   ||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
+                		printf("|  ||||||||||||||||||"ANSI_COLOR_RED"||||   |||||||||||   ||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
+                    		printf("|  ||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
+                    		printf("|  ||||||||||||||||||||"ANSI_COLOR_RED"||||||||| || ||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||\n");
+                    		printf("|  |||||||||||||||||||||"ANSI_COLOR_RED"||||||| _||_ ||||||||"ANSI_COLOR_NORMAL"|||||||||||||||||||\n"); 
+                   		printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||||||||\n");
+                    		printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||||||||\n");
+                    		printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"| | | | | | |"ANSI_COLOR_NORMAL"||||||||||||||||||||||||\n");
+                    		printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"!LOCKED--OUT!"ANSI_COLOR_NORMAL"||||||||||||||||||||||||\n");
+                    		printf("|  ||||||||||||||||||||||||"ANSI_COLOR_RED"|||||||||||||"ANSI_COLOR_NORMAL"||||||||||||||||||||||||\n");
+                    		printf("|  |\n");
+                    		printf("|  |\n");
+                    		printf("|  |\n");
+                    		printf("|  |\n");
+                    		printf("|  |\n");
+                    		printf("|  |\n");
+                    		printf("|__|\n");
                     
         			receivedTwo = 1;
         			failed = 1;												
